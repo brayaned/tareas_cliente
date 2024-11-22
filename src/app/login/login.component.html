@@ -1,0 +1,26 @@
+<div class="login-container">
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title>TaskMaster</mat-card-title>
+        <mat-card-subtitle>Gestión de Tareas Simplificada</mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content>
+        <form class="login-form" (ngSubmit)="onSubmit()">
+          <mat-form-field appearance="fill" class="form-field">
+            <mat-label>Correo Electrónico</mat-label>
+            <input matInput type="email" placeholder="Ingresa tu correo" [(ngModel)]="email" name="email" required>
+          </mat-form-field>
+          <mat-form-field appearance="fill" class="form-field">
+            <mat-label>Contraseña</mat-label>
+            <input matInput type="password" placeholder="Ingresa tu contraseña" [(ngModel)]="password" name="password" required>
+          </mat-form-field>
+          <button mat-raised-button color="primary" type="submit" class="btn">Iniciar Sesión</button>
+        </form>
+      </mat-card-content>
+      <mat-card-actions>
+        <a mat-button color="accent" routerLink="/forgot-password">¿Olvidaste tu contraseña?</a>
+        <a mat-button color="accent" routerLink="/signup">Crear cuenta</a>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+  
